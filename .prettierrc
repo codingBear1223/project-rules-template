@@ -1,0 +1,8 @@
+{
+    "$schema": "https://json.schemastore.org/prettierrc", // 使用 Prettier 的 JSON Schema
+    "singleQuote": true, // 使用单引号
+    "trailingComma": "none", // 尾逗号
+    "semi": false, // 分号
+    "tabWidth": 4, // 缩进大小
+    "printWidth": 100 // 行宽
+}
