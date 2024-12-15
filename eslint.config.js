@@ -1,6 +1,8 @@
 import js from "@eslint/js";
 import tsParser from "@typescript-eslint/parser";
 import tsEslint from "typescript-eslint";
+import * as espree from "espree";
+
 export default tsEslint.config(
     js.configs.recommended,
     ...tsEslint.configs.recommended,
@@ -33,12 +35,12 @@ export default tsEslint.config(
                 project: ["./tsconfig.eslint.json", "**/*/tsconfig.json"],
                 tsconfigRootDir: import.meta.dirname,
             },
-            overrides: [
-                {
-                    files: ["*.js", "*.mjs"],
-                    parser: "espree",
-                },
-            ],
+        },
+    },
+    {
+        files: ["*.js", "*.mjs"],
+        languageOptions: {
+            parser: espree,
         },
     }
 );
