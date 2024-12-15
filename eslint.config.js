@@ -33,6 +33,12 @@ export default tsEslint.config(
                 project: ["./tsconfig.eslint.json", "**/*/tsconfig.json"],
                 tsconfigRootDir: import.meta.dirname,
             },
+            overrides: [
+                {
+                    files: ["*.js", "*.mjs"],
+                    parser: "espree",
+                },
+            ],
         },
     }
 );
