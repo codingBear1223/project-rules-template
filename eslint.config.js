@@ -40,7 +40,7 @@ export default tsEslint.config(
     {
         files: ["*.js", "*.mjs"],
         languageOptions: {
-            parser: espree,
+            parser: espree, // 使用 espree 解析 js 文件
         },
     }
 );
